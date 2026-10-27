@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI-Based Career Guide
 
-## Getting Started
+A Computer Science capstone project exploring how one platform can help job seekers plan their next career step—from comparing skills with job requirements to preparing for interviews.
 
-First, run the development server:
+**Project URL:** [career-guide-ai-nine.vercel.app](https://career-guide-ai-nine.vercel.app) · **Source:** this repository
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
+- Browse job listings and analyse skill gaps against selected roles.
+- Maintain a career profile and resume data; generate resume improvements.
+- Create learning paths and discover learning resources.
+- Practise text-based or voice-assisted mock interviews and review feedback.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Stack
+Next.js App Router, React, TypeScript, PostgreSQL, Prisma, Better Auth, Google Gemini API and optional ElevenLabs text-to-speech.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Local setup
+Requirements: a compatible Node.js release, npm and a PostgreSQL database.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Clone the repository and install dependencies:
+   ```bash
+   git clone https://github.com/Ezra2121-et/career-guide-ai.git
+   cd career-guide-ai
+   npm install
+   ```
+2. Create `.env` in the repository root (see `.env.example`). Set `DIRECT_URL`, `BETTER_AUTH_SECRET` and `BETTER_AUTH_URL`. Add `GEMINI_API_KEY` for Gemini features; `ELEVEN_LABS_API_KEY` enables voice synthesis.
+3. Generate the Prisma client, apply the existing migrations and start the development server:
+   ```bash
+   npx prisma generate
+   npx prisma migrate deploy
+   npm run dev
+   ```
+4. Open `http://localhost:3000`.
 
-## Learn More
+## Notes
+AI and voice features require their respective API keys. Keep secrets server-side, never commit `.env`, and do not treat generated career guidance as a guarantee of employment outcomes. The deployment URL is provided for demonstration; availability depends on its configured services.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+Released under the MIT License. See [LICENSE](LICENSE). Third-party packages and services remain subject to their own terms.
