@@ -2,7 +2,7 @@
 
 A Computer Science capstone project exploring how one platform can help job seekers plan their next career step—from comparing skills with job requirements to preparing for interviews.
 
-**Project URL:** [career-guide-ai-nine.vercel.app](https://career-guide-ai-nine.vercel.app) · **Source:** this repository
+**Project URL:** [career-guide-ai-nine.vercel.app](https://career-guide-ai-nine.vercel.app) · **Source:** [GitHub repository](https://github.com/Ezra2121-et/career-guide-ai)
 
 ## Features
 - Browse job listings and analyse skill gaps against selected roles.
